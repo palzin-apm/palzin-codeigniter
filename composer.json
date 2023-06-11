@@ -1,0 +1,60 @@
+{
+  "name": "palzin-apm/palzin-codeigniter",
+  "description": "Real-Time monitoring Codeigniter package using Palzin Monitor (APM).",
+  "keywords": ["monitoring", "php", "palzin", "codeigniter4"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Palzin Team",
+      "email": "hello@palzin.app"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.2",
+    "palzin-apm/palzin-php": "^23.03.08"
+  },
+  "require-dev": {
+    "codeigniter/coding-standard": "^1.1",
+    "codeigniter4/codeigniter4": "^4.2",
+    "phpunit/phpunit": "^9.0",
+    "nexusphp/cs-config": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Palzin\\CodeIgniter\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Palzin\\CodeIgniter\\Tests\\": "tests",
+      "Palzin\\CodeIgniter\\Tests\\Support\\": "tests/_support"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "bash -c \"if [ -f admin/setup.sh ]; then bash admin/setup.sh; fi\""
+    ],
+    "ci": [
+      "Composer\\Config::disableProcessTimeout",
+      "@deduplicate",
+      "@test",
+      "@style"
+    ],
+    "deduplicate": "phpcpd app/ src/",
+    "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
+    "test": "phpunit"
+  },
+  "extra": {
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/codeigniter4/CodeIgniter4"
+    }
+  ]
+}
