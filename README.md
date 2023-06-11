@@ -2,7 +2,6 @@
 
 [![Latest Stable Version](https://poser.pugx.org/palzin-apm/palzin-codeigniter/v/stable)](https://packagist.org/packages/palzin-apm/palzin-codeigniter)
 [![License](https://poser.pugx.org/palzin-apm/palzin-codeigniter/license)](//packagist.org/packages/palzin-apm/palzin-codeigniter)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 
 Palzin Monitor offers real-time performance monitoring capabilities that allow you to effectively monitor and analyze the performance of your applications. With Palzin Monitor, you can capture and track all requests without the need for any code modifications. This feature enables you to gain valuable insights into the impact of your methods, database statements, and external requests on the overall user experience.
