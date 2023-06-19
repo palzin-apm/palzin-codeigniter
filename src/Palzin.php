@@ -19,7 +19,7 @@ class Palzin extends PalzinLibrary
      *
      * @var string
      */
-    public const VERSION = '0.2.1';
+    public const VERSION = '23.03.22';
 
     private Segment $Segment;
 
